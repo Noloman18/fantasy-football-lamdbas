@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>fantasy-football-data-fetch</artifactId>
+    <artifactId>query-football-data</artifactId>
 
     <dependencies>
         <dependency>
@@ -75,7 +75,7 @@
     </dependencies>
 
     <build>
-        <finalName>fetch-fantasy-football-data</finalName>
+        <finalName>query-fantasy-football</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -106,7 +106,6 @@
             </plugin>
         </plugins>
     </build>
-
 
 
 </project>
