@@ -88,6 +88,9 @@ public class PlayerSummary {
     @SerializedName("team_code")
     @Expose
     public Integer teamCode;
+    @SerializedName("team_details")
+    @Expose
+    public TeamSummary teamSummary;
     @SerializedName("total_points")
     @Expose
     public Integer totalPoints;

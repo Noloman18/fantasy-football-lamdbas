@@ -121,10 +121,22 @@ public class LeagueDetailsPersistenceServiceDynamoDB implements LeagueDetailsPer
                     object == null ? null : removeNullValues.apply(gson.fromJson(gson.toJson(object), Map.class));
 
             Arrays.stream(leagueSummary.elements).parallel().forEach(playerSummary -> {
+
+                TeamSummary teamSummary = null;
+
+                if (playerSummary.team > 0 && playerSummary.team < leagueSummary.teams.length) {
+                    teamSummary = leagueSummary.teams[playerSummary.team - 1];
+                }
+
                 String key = String.format("%s_%d", prefix, playerSummary.id);
                 Item newItem = new Item().withPrimaryKey("player-season-id", key);
 
                 Map<String, Object> playerDetails = convertObjectToMap.apply(playerSummary);
+                Map<String, Object> teamDetails = convertObjectToMap.apply(teamSummary);
+
+                if (teamDetails != null && teamDetails.size() > 0)
+                    playerDetails.put("team_details", teamDetails);
+
                 playerDetails.put("day_of_year", dayOfYear);
 
                 for (Map.Entry<String, Object> keyValue : playerDetails.entrySet()) {
