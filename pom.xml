@@ -29,7 +29,7 @@
         <aws-java-sdk-s3.version>1.11.613</aws-java-sdk-s3.version>
         <aws-lambda-java-core.version>1.0.0</aws-lambda-java-core.version>
         <maven-assembly-plugin.version>3.1.1</maven-assembly-plugin.version>
-        <jackson-databind.version>2.10.1</jackson-databind.version>
+        <jackson-databind.version>2.10.5.1</jackson-databind.version>
     </properties>
 
     <dependencyManagement>
