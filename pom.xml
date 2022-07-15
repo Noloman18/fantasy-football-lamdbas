@@ -26,7 +26,7 @@
         <commons-lang3.version>3.9</commons-lang3.version>
         <guava.version>28.0-jre</guava.version>
         <aws-java-sdk-sns.version>1.11.608</aws-java-sdk-sns.version>
-        <aws-java-sdk-s3.version>1.11.613</aws-java-sdk-s3.version>
+        <aws-java-sdk-s3.version>1.12.261</aws-java-sdk-s3.version>
         <aws-lambda-java-core.version>1.0.0</aws-lambda-java-core.version>
         <maven-assembly-plugin.version>3.1.1</maven-assembly-plugin.version>
         <jackson-databind.version>2.10.1</jackson-databind.version>
